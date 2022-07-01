@@ -202,6 +202,20 @@ nav ul li a:hover
   width: 90%;
 }
 
+.cek
+{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.cek img
+{
+  border-radius: 10px;
+  width: 90%;
+}
+
 .title-g
 {
   margin-left: 60px;
@@ -253,6 +267,19 @@ nav ul li a:hover
 {
   width: 30px;
 }
+
+.cek-id
+{
+  background-color: var(--red);
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.cek-id:hover
+{
+  background-color: var(--white);
+}
+
 
 .tentang
 {

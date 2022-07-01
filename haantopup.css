@@ -4,6 +4,7 @@
   --dark-blue : #1B1535;
   --green : #00EB09;
   --white : #fff;
+  --red : #fa0000;
 }
 
 *
@@ -279,7 +280,6 @@ nav ul li a:hover
 {
   background-color: var(--white);
 }
-
 
 .tentang
 {

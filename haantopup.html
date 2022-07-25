@@ -1,426 +1,772 @@
-:root
-{
-  --blue : #2C2546;
-  --dark-blue : #1B1535;
-  --green : #00EB09;
-  --white : #fff;
-  --red : #fa0000;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HaanTopUp</title>
+  <link rel="icon" href="logo.pn">
+  <link rel="stylesheet" href="haantopup.css" type="text/css" media="all" />
+</head>
+<body>
+  <header>
+    <a href="/" class="title-h">HAANTOPUP</a>
+    <input type="search" name="" id="" class="input-search" placeholder="Cari Di HaanTopUp">
+    <button type="submit" class="input-submit">CARI</button>
+     <nav>
+       <ul>
 
-*
-{
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style-type: none;
-  box-sizing: 'border-box;
-  font-family: 'Tahoma';
-}
-
-body
-{
-  background-color: var(--dark-blue);
-  color: var(--white);
-}
-
-header
-{
-  text-align: center;
-  background-color: var(--blue);
-  position: fixed;
-  width: 100%;
-  font-weight: bold;
-  padding: 3%;
-  top: 0;
-}
-
-.title-h
-{
-  color: var(--green);
-  border-bottom: 2px solid var(--white);
-  font-size: 15pt;
-}
-
-.title-q
-{
-  color: var(--green);
-  font-weight: bold;
-  font-size: 15pt;
-}
-
-.title-z
-{
-  color: var(--white);
-  font-weight: bold;
-}
-
-.input-search
-{
-  width: 30%;
-  border: none;
-  border-radius: 0 0 0 15px;
-  padding: 2px;
-}
-
-.input-submit
-{
-  margin-left: -5px;
-  border: none;
-  border-radius: 0 15px 0 0;
-  padding: 2px;
-  background-color: var(--green);
-  width: 5%;
-  font-weight: bold;
-}
-
-nav
-{
-  margin-top: 15px;
-}
-
-nav ul
-{
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-nav ul li a 
-{
-  color: var(--green);
-}
-
-nav ul li a:hover
-{
-  border-bottom: 3px solid var(--white);
-}
-
-.slider
-{
-    margin-top: 10%;
-    display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 75%;
-}
-
-.slider h4
-{
-    margin-top: 20%;
-}
-
-.slides
-{
-    display: flex;
-    width: 50rem;
-    overflow: hidden;
-}
-
-.slides img 
-{
-    border-radius: 10px;
-}
-
-.slide
-{
-    width: 50rem;
-    transition: .5s;
-}
-
-.choose_1:checked ~ .slides > .s1
-{
-    margin-left: -0rem;
-}
-
-.choose_2:checked ~ .slides > .s1
-{
-    margin-left: -50rem;
-}
-
-.overlay 
-{
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.overlay:target 
-{
-    visibility: visible;
-    opacity: 1;
-}
-
-.popup 
-{
-    margin: 70px auto;
-    padding: 20px;
-    background: var(--dark-blue);
-    border-radius: 5px;
-    width: 30%;
-    position: relative;
-    transition: all 5s ease-in-out;
-}
+       </ul>
+     </nav>
+  </header>
   
-.popup h2 {
-    margin-top: 0;
-    color: var(--white);
-    font-family: Tahoma, Arial, sans-serif;
-}
-
-.popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-}
-
-.popup .close:hover 
-{
-    color: #06D85F;
-}
-
-.content 
-{
-    max-height: 30%;
-    width: 50%;
-}
-
-.title-p
-{
-  margin-left: 60px;
-  margin-top: 5%;
-}
-
-.title-g
-{
-  margin-left: 60px;
-  margin-top: 5%;
-}
-
-.game
-{
-  display: grid;
-  grid-template-columns: repeat(6,1fr);
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.game img
-{
-  border-radius: 10px;
-  width: 90%;
-}
-
-.title-v
-{
-  margin-left: 60px;
-  margin-top: 5%;
-}
-
-.voucher
-{
-  display: grid;
-  grid-template-columns: repeat(6,1fr);
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.voucher img
-{
-  border-radius: 10px;
-  width: 90%;
-}
-
-.judul-produk
-{
-  font-weight: bold;
-}
-
-.content 
-{
-  font-weight: bold;
-}
-
-.harga
-{
-  color: var(--green);
-}
-
-.link a 
-{
-  color: var(--white);
-}
-
-.link a:hover
-{
-  color: var(--green);
-}
-
-.pesan
-{
-  background-color: var(--green);
-  color: var(--white);
-  padding: 3%;
-  border-radius: 10px;
-  font-size: 8pt;
-}
-
-.pesan:hover
-{
-  background-color: var(--white);
-}
-
-.pesan img
-{
-  width: 30px;
-}
-
-.cek-id
-{
-  background-color: var(--red);
-  color: var(--white);
-  padding: 2%;
-  border-radius: 10px;
-}
-
-.cek-id:hover
-{
-  background-color: var(--white);
-}
-
-.tentang
-{
-    display: grid;
-    justify-content: center;
-    margin-top: 10%;
-    font-size: 15pt;
-}
- 
-.card
-{
-    background-color: var(--blue);
-    padding: 5%;
-    border-radius: 10px;
-    box-shadow: 20px 20px black;
-}
- 
-.card h1
-{
-    text-align: center;
-}
- 
-html
-{
-    scroll-behavior: smooth;
-}
- 
- 
-footer
-{
-    display: grid;
-    justify-content: center;
-    background-color: var(--blue);
-    margin-top: 10%;
-    padding: 2%;
-}
- 
-.sosmed img 
-{
-    width: 50px;
-}
- 
-#copyright
-{
-    text-align: center;
-    padding: 10px;
-}
-
-@media screen and (max-width: 600px)
-{
-  nav ul li a 
-  {
-    font-size: 11pt;
-  }
+  <div id="home" class="slider">
+        <h4>Klik Disini Untuk Slide Gambar</h4>
+        <input type="radio" name="choose" id="" class="choose_1">
+        <input type="radio" name="choose" id="" class="choose_2">
+        <div class="slides">
+            <img src="slide-1.jpg" alt="" class="slide s1">
+            <img src="slide-2.jpg" alt="" class="slide">
+        </div>
+</div>
+   <h1 class="title-p"></h1>
+   
+             <h1 class="title-g">GAME</h1>
+     <section id="game" class="game">
+        <div class="sm">
+        <div class="link">
+            <a href="#harga-sm">
+                    <img src="saus.png" alt="">
+                    <div class="judul-produk">SAUSAGE MAN</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-sm">
+            <div class="popup">
+                <h2>HARGA SAUSAGE MAN</h2>
+                <a class="close" href="#game">&times;</a>
+                <br>
+                <div class="content">
+                    60 CANDY : 
+                    <br>    
+                    <span class="harga">Rp 15.000</span>
+                    <br>
+                    180 CANDY : 
+                    <br>
+                    <span class="harga">Rp 41.500</span>
+                    <br>
+                    300 CANDY : 
+                    <br>
+                    <span class="harga">Rp 70.500</span>
+                    <br>
+                    680 CANDY : 
+                    <br>
+                    <span class="harga">Rp 142.000</span>
+                    <br>
+                    1280 CANDY : 
+                    <br>
+                    <span class="harga">Rp 306.600</span>
+                    <br>
+                     1980 CANDY : 
+                    <br>
+                    <span class="harga">Rp 446.000</span>
+                    <br>
+                    3280 CANDY : 
+                    <br>
+                    <span class="harga">Rp 741.000</span>
+                    <br>
+                    6480 CANDY : 
+                    <br>
+                    <span class="harga">Rp 1.477.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="sd">
+        <div class="link">
+            <a href="#harga-sd">
+                    <img src="S.png" alt="">
+                    <div class="judul-produk">SPEED DRIFTERS</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-sd">
+            <div class="popup">
+                <h2>HARGA SPEED DRIFTERS</h2>
+                <a class="close" href="#game">&times;</a>
+                <br>
+                <div class="content">
+                    112 DIAMOND : 
+                    <br>    
+                    <span class="harga">Rp 20.000</span>
+                    <br>
+                    282 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 50.000</span>
+                    <br>
+                    579 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 98.500</span>
+                    <br>
+                    1230 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 197.000</span>
+                    <br>
+                    1845 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 297.000</span>
+                    <br>
+                    3134 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 493.000</span>
+                    <br>
+                   6279  DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 962.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="hago">
+        <div class="link">
+            <a href="#harga-hago">
+                    <img src="hagoo.png" alt="">
+                    <div class="judul-produk">HAGO</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-hago">
+            <div class="popup">
+                <h2>HARGA DIAMOND HAGO</h2>
+                <a class="close" href="#game">&times;</a>
+                <br>
+                <div class="content">
+                    40 DIAMOND : 
+                    <br>    
+                    <span class="harga">Rp 13.000</span>
+                    <br>
+                    45 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 15.000</span>
+                    <br>
+                    50 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 16.000</span>
+                    <br>
+                    60 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 17.000</span>
+                    <br>
+                    70 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 20.000</span>
+                    <br>
+                    80 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 22.700</span>
+                    <br>
+                    90 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 27.300</span>
+                    <br>
+                    100 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 28.500</span>
+                    <br>
+                    275 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 85.000</span>
+                    <br>
+                    375 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 125.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
   
-  .slider
-  {
-    display: none;
-  }
-  
-  .title-p
-  {
-    padding-top: 4rem;
-    margin-left: 20px;
-  }
-  
-  .cek
-  {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    font-size: 10pt;
-  }
-  
-    .title-g
-  {
-    padding-top: 4;
-    margin-left: 20px;
-  }
-  
- .game
-  {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    font-size: 10pt;
-  }
-  
-   .title-v
-  {
-    padding-top: 4;
-    margin-left: 20px;
-  }
-  
- .voucher
-  {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    font-size: 10pt;
-  }
-  
-  .popup
-  {
-    width: 60%;
-  }
-  
-  .link img
-  {
-    width: 70%;
-  }
-  
-  .tentang
-  {
-    width: 90%;
-    padding-left: 1rem;
-    font-size: 13pt;
-  }
-  
-  .sosmed
-  {
-    font-size: 10pt;
-    padding-left: 6rem;
-  }
-  
-  .sosmed img
-  {
-    width: 10%;
-  }
-}
+        <div class="ff">
+        <div class="link">
+            <a href="#harga-ff">
+                    <img src="free.png" alt="">
+                    <div class="judul-produk">FREE FIRE</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-ff">
+            <div class="popup">
+                <h2>HARGA FREE FIRE</h2>
+                <a class="close" href="#game">&times;</a>
+                <br>
+                <div class="content">
+                    75 DIAMOND : 
+                    <br>    
+                    <span class="harga">Rp 10.200</span>
+                    <br>
+                    100 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 15.000</span>
+                    <br>
+                    140 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 19.000</span>
+                    <br>
+                    210 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 29.000</span>
+                    <br>
+                    300 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 41.000</span>
+                    <br>
+                    355 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 45.000</span>
+                    <br>
+                    400 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 53.300</span>
+                    <br>
+                    512 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 68.200</span>
+                    <br>
+                    M. MINGGUAN : 
+                    <br>
+                    <span class="harga">Rp 28.500</span>
+                    <br>
+                    M. BULANAN : 
+                    <br>
+                    <span class="harga">Rp 142.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="mlbb">
+        <div class="link">
+            <a href="#harga-mlbb">
+                    <img src="M.png" alt="">
+                    <div class="judul-produk">MOBILE LEGEND</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-mlbb">
+            <div class="popup">
+                <h2>HARGA MOBILE LEGEND</h2>
+                <a class="close" href="#game">&times;</a>
+                <br>
+                <div class="content">
+                    86 DIAMOND : 
+                    <br>    
+                    <span class="harga">Rp 21.700</span>
+                    <br>
+                    172 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 42.000</span>
+                    <br>
+                    257 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 61.400</span>
+                    <br>
+                    429 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 103.500</span>
+                    <br>
+                    514 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 124.100</span>
+                    <br>
+                    600 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 145.500</span>
+                    <br>
+                    878 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 205.500</span>
+                    <br>
+                    1028 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 248.200</span>
+                    <br>
+                    TWILIGHT PASS : 
+                    <br>
+                    <span class="harga">Rp 142.700</span>
+                    <br>
+                    STARLIGHT MEMBER : 
+                    <br>
+                    <span class="harga">Rp 142.700</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="hdi">
+        <div class="link">
+            <a href="#harga-hdi">
+                    <img src="H.png" alt="">
+                    <div class="judul-produk">HIGGS DOMINO</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-hdi">
+            <div class="popup">
+                <h2>HARGA HIGGS DOMINO</h2>
+                <a class="close" href="#game">&times;</a>
+                <br>
+                <div class="content">
+                    200M KOIN EMAS-D  : 
+                    <br>    
+                    <span class="harga">Rp 29.000</span>
+                    <br>
+                    400M KOIN EMAS-D : 
+                    <br>
+                    <span class="harga">Rp 58.300</span>
+                    <br>
+                    2B KOIN EMAS-D : 
+                    <br>
+                    <span class="harga">Rp 239.000</span>
+                    <br>
+                    4B KOIN EMAS-D : 
+                    <br>
+                    <span class="harga">Rp 489.500</span>
+                    <br>
+                    2B CHIP UNGU-D : 
+                    <br>
+                    <span class="harga">Rp 136.500</span>
+                    <br>
+                    3B CHIP UNGU-D  : 
+                    <br>
+                    <span class="harga">Rp 208.000</span>
+                    <br>
+                    4B CHIP UNGU-D : 
+                    <br>
+                    <span class="harga">Rp 279.500</span>
+                    <br>
+                    5B CHIP UNGU-D : 
+                    <br>
+                    <span class="harga">Rp 346.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="vr">
+
+         <div class="link">
+
+            <a href="#harga-vr">
+                    <img src="V.png" alt="">
+                    <div class="judul-produk">VALORANT</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-vr">
+            <div class="popup">
+                <h2>HARGA VALORANT</h2>
+                <a class="close" href="#game">&times;</a>
+                <br>
+                <div class="content">
+                    420 POINT : 
+                    <br>    
+                    <span class="harga">Rp 49.500</span>
+                    <br>
+                    700 POINT : 
+                    <br>
+                    <span class="harga">Rp 78.500</span>
+                    <br>
+                    1375 POINT : 
+                    <br>
+                    <span class="harga">Rp 146.300
+                    </span>
+                    <br>
+                    2400 POINT : 
+                    <br>
+                    <span class="harga">Rp 245.000</span>
+                    <br>
+                    4000 POINT: 
+                    <br>
+                    <span class="harga">Rp 390.000</span>
+                    <br>
+                    8150 POINT : 
+                    <br>
+                    <span class="harga">Rp 778.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="genshin">
+        <div class="link">
+            <a href="#harga-genshin">
+                    <img src="G.png" alt="">
+                    <div class="judul-produk">GENSHIN IMPACT</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-genshin">
+            <div class="popup">
+                <h2>HARGA GENSHIN IMPACT</h2>
+                <a class="close" href="#game">&times;</a>
+                <br>
+                <div class="content">
+                    60 CRYSTAL : 
+                    <br>    
+                    <span class="harga">Rp 14.000</span>
+                    <br>
+                    330 CRYSTAL : 
+                    <br>
+                    <span class="harga">Rp 64.000</span>
+                    <br>
+                    1090 CRYSTAL : 
+                    <br>
+                    <span class="harga">Rp 198.000</span>
+                    <br>
+                    2240 CRYSTAL : 
+                    <br>
+                    <span class="harga">Rp 432.000</span>
+                    <br>
+                    3880 CRYSTAL : 
+                    <br>
+                    <span class="harga">Rp 702.000</span>
+                    <br>
+                    8080 CRYSTAL : 
+                    <br>
+                    <span class="harga">Rp 1.302.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="pubgm">
+        <div class="link">
+            <a href="#harga-pubgm">
+                    <img src="P.png" alt="">
+                    <div class="judul-produk">PUBG MOBILE</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-pubgm">
+            <div class="popup">
+                <h2>HARGA PUBG MOBILE</h2>
+                <a class="close" href="#game">&times;</a>
+                <br>
+                <div class="content">
+                    250 UC : 
+                    <br>    
+                    <span class="harga">Rp 47.000</span>
+                    <br>
+                    600 UC : 
+                    <br>
+                    <span class="harga">Rp 105.000</span>
+                    <br>
+                    1250 UC : 
+                    <br>
+                    <span class="harga">Rp 232.000</span>
+                    <br>
+                    3500 UC : 
+                    <br>
+                    <span class="harga">Rp 627.000</span>
+                    <br>
+                    7000 UC : 
+                    <br>
+                    <span class="harga">Rp 1.329.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="au2">
+        <div class="link">
+            <a href="#harga-au2">
+                    <img src="AU2.png" alt="">
+                    <div class="judul-produk">AU2 MOBILE</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-au2">
+            <div class="popup">
+                <h2>HARGA AU2 MOBILE</h2>
+                <a class="close" href="#game">&times;</a>
+                <br>
+                <div class="content">
+                    72 DIAMOND : 
+                    <br>    
+                    <span class="harga">Rp 15.000</span>
+                    <br>
+                    144 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 28.400</span>
+                    <br>
+                    360 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 72.000</span>
+                    <br>
+                    816 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 142.300</span>
+                    <br>
+                    1536 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 285.000</span>
+                    <br>
+                    2376 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 418.200</span>
+                    <br>
+                    3936 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 703.000</span>
+                    <br>
+                    7776 DIAMOND : 
+                    <br>
+                    <span class="harga">Rp 1.424.555</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="cod">
+        <div class="link">
+            <a href="#harga-cod">
+                    <img src="call.png" alt="">
+                    <div class="judul-produk">CALL OF DUTY</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-cod">
+            <div class="popup">
+                <h2>HARGA CALL OF DUTY</h2>
+                <a class="close" href="#game">&times;</a>
+                <br>
+                <div class="content">
+                    COD 106 : 
+                    <br>    
+                    <span class="harga">Rp 20.000</span>
+                    <br>
+                    COD 264 : 
+                    <br>
+                    <span class="harga">Rp 47.000</span>
+                    <br>
+                    COD 528 : 
+                    <br>
+                    <span class="harga">Rp 92.700</span>
+                    <br>
+                    COD 1056 : 
+                    <br>
+                    <span class="harga">Rp 184.800</span>
+                    <br>
+                    COD 1584: 
+                    <br>
+                    <span class="harga">Rp 286.000</span>
+                    <br>
+                    COD 2640 : 
+                    <br>
+                    <span class="harga">Rp 476.000</span>
+                    <br>
+                    COD 5280 : 
+                    <br>
+                    <span class="harga">Rp 951.000</span>
+                    <br>
+                    COD 10560 : 
+                    <br>
+                    <span class="harga">Rp 1.902.000</span>
+                    <br>
+                    COD 26400 : 
+                    <br>
+                    <span class="harga">Rp 4.752.000</span>
+                    <br>
+                    COD 52800 : 
+                    <br>
+                    <span class="harga">Rp 9.503.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="la">
+        <div class="link">
+            <a href="#harga-la">
+                    <img src="life.png" alt="">
+                    <div class="judul-produk">LIFE AFTER</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-la">
+            <div class="popup">
+                <h2>HARGA LIFE AFTER</h2>
+                <a class="close" href="#game">&times;</a>
+                <br>
+                <div class="content">
+                    65 CREDITS : 
+                    <br>    
+                    <span class="harga">Rp 14.500</span>
+                    <br>
+                    330 CREDITS : 
+                    <br>
+                    <span class="harga">Rp 69.600</span>
+                    <br>
+                    558 CREDITS : 
+                    <br>
+                    <span class="harga">Rp 113.000</span>
+                    <br>
+                    1108 CREDITS : 
+                    <br>
+                    <span class="harga">Rp 212.000</span>
+                    <br>
+                    2268 CREDITS : 
+                    <br>
+                    <span class="harga">Rp 423.000</span>
+                    <br>
+                    3468 CREDITS : 
+                    <br>
+                    <span class="harga">Rp 662.000</span>
+                    <br>
+                    5768 CREDITS : 
+                    <br>
+                    <span class="harga">Rp 1.056.000</span>
+                    <br>
+                    7768 CREDITS : 
+                    <br>
+                    <span class="harga">Rp 1.407.400</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+             <h1 class="title-v">VOUCHER</h1>
+             <section id="voucher" class="voucher">
+
+        <div class="ps">
+        <div class="link">
+            <a href="#harga-ps">
+                    <img src="gp.png" alt="">
+                    <div class="judul-produk">GOOGLE PLAY</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-ps">
+            <div class="popup">
+                <h2>HARGA GOOGLE PLAY</h2>
+                <a class="close" href="#voucher">&times;</a>
+                <br>
+                <div class="content">
+                    GOOGLE 10K : 
+                    <br>    
+                    <span class="harga">Rp 11.500</span>
+                    <br>
+                    GOOGLE 20K : 
+                    <br>
+                    <span class="harga">Rp 21.400</span>
+                    <br>
+                    GOOGLE 30K : 
+                    <br>
+                    <span class="harga">Rp 31.300</span>
+                    <br>
+                    GOOGLE 40K : 
+                    <br>
+                    <span class="harga">Rp 41.200</span>
+                    <br>
+                    GOOGLE 50K : 
+                    <br>
+                    <span class="harga">Rp 51.100</span>
+                    <br>
+                    GOOGLE 60K : 
+                    <br>
+                    <span class="harga">Rp 61.000</span>
+                    <br>
+                    GOOGLE 70K : 
+                    <br>
+                    <span class="harga">Rp 71.000</span>
+                    <br>
+                    GOOGLE 80K : 
+                    <br>
+                    <span class="harga">Rp 81.000</span>
+                    <br>
+                    GOOGLE 90K : 
+                    <br>
+                    <span class="harga">Rp 91.000</span>
+                    <br>
+                    GOOGLE 100K : 
+                    <br>
+                    <span class="harga">Rp 100.500</span>
+                    <br>                    
+                    <a class="pesan" href="https://wa.me/6283805582847" 
+                    target="_blank" 
+                    rel="noopener noreferrer"><img src="whatsapp.png" alt="">PESAN SEKARANG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+             </section>
+         
+<section class="tentang" id="tentang">
+        <div class="card">
+            <h1>TENTANG KAMI</h1>
+            <br>
+            <p>
+                <a href="" class="title-q">HAANTOPUP</a>
+                <a href="" class="title-z">Adalah Website Yang Menyediakan Layanan Digital 
+                <br>
+                Seperti Layanan Streaming Premium, Voucher Game, Dan Lain-Lain.
+                <br>
+                Kami Berdiri Sejak Tahun 2022 Dan Telah Dipercaya Oleh Berbagai Konsumen. </a>
+            </p>
+        </div>
+    </section>
+    
+    
+     
+    <footer>
+        <div class="sosmed">
+            <h1>SOSIAL MEDIA</h1>
+            <a href="https://instagram.com/haan11store_real" target="_blank" rel="noopener noreferrer"><img src="ig.png" alt=""></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="fb.png" alt=""></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="github.png" alt=""></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="linkedin.png" alt=""></a>
+        </div>
+    </footer>
+    <div id="copyright">
+        &copy;2022 HAANTOPUP
+    </div>
+</body>
+</html>

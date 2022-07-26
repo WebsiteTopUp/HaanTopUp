@@ -270,7 +270,7 @@ nav ul li a:hover
 {
   background-color: var(--green);
   color: var(--white);
-  padding: 3%;
+  padding: 2%;
   border-radius: 10px;
   font-size: 8pt;
 }

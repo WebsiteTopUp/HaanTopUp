@@ -269,9 +269,11 @@ nav ul li a:hover
 .pesan
 {
   background-color: var(--green);
-  padding: 3%;
+  color: var(--white);
+  padding:4%;
   border-radius: 10px;
   font-size: 8pt;
+  ;
 }
 
 .pesan:hover
@@ -281,7 +283,7 @@ nav ul li a:hover
 
 .pesan img
 {
-  width: 30px;
+  width: 15px;
 }
 
 .cek-id

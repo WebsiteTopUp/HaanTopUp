@@ -269,8 +269,7 @@ nav ul li a:hover
 .pesan
 {
   background-color: var(--green);
-  color: var(--white);
-  padding: 2%;
+  padding: 3%;
   border-radius: 10px;
   font-size: 8pt;
 }

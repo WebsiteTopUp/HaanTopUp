@@ -118,7 +118,7 @@ nav ul li a:hover
 
 .slides img 
 {
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .slide
@@ -135,6 +135,12 @@ nav ul li a:hover
 .choose_2:checked ~ .slides > .s1
 {
     margin-left: -50rem;
+}
+
+.choose_3:checked ~ .slides > .s1
+{
+
+    margin-left: -100rem;
 }
 
 .overlay 
@@ -197,13 +203,27 @@ nav ul li a:hover
 
 .title-p
 {
-  margin-left: 60px;
+  margin-left: 50px;
   margin-top: 5%;
+}
+
+.populer
+{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.populer img
+{
+  border-radius: 10px;
+  width: 90%;
 }
 
 .title-g
 {
-  margin-left: 60px;
+  margin-left: 50px;
   margin-top: 5%;
 }
 
@@ -223,7 +243,7 @@ nav ul li a:hover
 
 .title-v
 {
-  margin-left: 60px;
+  margin-left: 50px;
   margin-top: 5%;
 }
 
@@ -240,6 +260,11 @@ nav ul li a:hover
   border-radius: 10px;
   width: 90%;
 }
+
+  .link img
+  {
+    width: 80%;
+  }
 
 .judul-produk
 {
@@ -352,7 +377,7 @@ footer
   {
     font-size: 11pt;
   }
-  
+    
   .slider
   {
     display: none;
@@ -364,6 +389,13 @@ footer
     margin-left: 20px;
   }
   
+   .populer
+  {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 10pt;
+  }
+  
   .cek
   {
     display: grid;
@@ -373,7 +405,7 @@ footer
   
     .title-g
   {
-    padding-top: 4;
+    padding-top: 8;
     margin-left: 20px;
   }
   
@@ -404,7 +436,7 @@ footer
   
   .link img
   {
-    width: 70%;
+    width: 80%;
   }
   
   .tentang
